@@ -1,0 +1,46 @@
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+	def twitter
+		auth_hash = request.env["omniauth.auth"]
+		uid = auth_hasḧ́['uid']
+		name = auth_hasḧ́['info']['name']
+		auth = Authorization.find_by_provider_and_uid("twitter", uid)
+		if auth 
+			## We already know about this user who is signing in with
+			# the provider: just return the user associated with th Authorization
+			user = auth.user
+		else
+			## Is a user signed in already? If onot, then find or create
+			# the user
+			unless current_user
+				unless user = User.finde_by_name(name)
+					user = User.create({
+						name: name,
+						password: Devise.frienly_token[0,8],
+						email: "#{{UUIDTools::UUID.random_create}@shareup.com}"
+						})
+				end
+			else
+				user = current_user
+			end
+
+			## Finally, create an authorization for the current user
+			unless auth = user.authorization.find_by_provider("twitter")
+				auth = user.authorization.build(provider: "twitter", uid: uid)
+				user.authorization << auth
+			end
+			auth.update_attributes({
+				uid: uid,
+				token: auth_hasḧ́['credentials']['token'],
+				secret: auth_hasḧ́['creadentials']['secret']
+				name: name,
+				url: "http://twitter.com/#{name}"
+				})
+		end
+		if user
+			sign_in_and_redirect user, :event => :auhentication
+		else
+			redirect_to :new_user_registrations
+		end
+		
+	end
+end
