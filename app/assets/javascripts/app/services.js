@@ -23,8 +23,12 @@ angular.module('myApp.services', [])
 
 		return service;
 })
-.factory('Share', function($resource){
-
+.factory('Share', function($resource) {
+	var Share = $resource('/api/shares/:id.json',
+		{id: '@id'},
+		{}
+		);
+	return Share;
 })
 .factory('SessionService', function($http, $q) {
 	var service = {

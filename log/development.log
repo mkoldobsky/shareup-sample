@@ -2720,3 +2720,202 @@ Started GET "/api/current_user" for 127.0.0.1 at 2013-10-05 11:09:17 -0300
 Processing by Users::SessionsController#show_current_user as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
 Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-05 16:04:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/angular (4.3ms)
+Completed 500 Internal Server Error in 1061ms
+
+ActionView::Template::Error (Error: Line 34: Unexpected token .
+  (in /home/user/Projects/shareup-sample/app/assets/javascripts/app/services.js)):
+    15:   		<div data-ng-view></div>
+    16: 
+    17:   	</div>
+    18:   	<%= javascript_include_tag "application" %>
+    19:   </body>
+    20: </html>
+  app/views/layouts/angular.html.erb:18:in `_app_views_layouts_angular_html_erb___95175979__620426788'
+
+
+  Rendered /home/user/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/user/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/user/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-05 16:04:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/angular (1.6ms)
+Completed 200 OK in 915ms (Views: 910.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-05 16:04:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-05 16:04:43 -0300
+
+
+Started GET "/assets/shares.css?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/app/controllers.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/app/services.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/shares.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+
+
+Started GET "/api/current_user" for 127.0.0.1 at 2013-10-05 16:04:44 -0300
+Processing by Users::SessionsController#show_current_user as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-05 16:06:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/angular (2.0ms)
+Completed 200 OK in 534ms (Views: 531.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/shares.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/app/controllers.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/app/services.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/shares.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:38 -0300
+
+
+Started GET "/api/current_user" for 127.0.0.1 at 2013-10-05 16:06:39 -0300
+Processing by Users::SessionsController#show_current_user as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/angular (0.4ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/shares.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/angular-resource.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/app/app.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/app/controllers.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/app/services.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/shares.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+
+
+Started GET "/api/current_user" for 127.0.0.1 at 2013-10-05 16:06:46 -0300
+Processing by Users::SessionsController#show_current_user as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.1ms)
